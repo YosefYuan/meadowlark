@@ -5,6 +5,7 @@
     {{#if showTests}}
         <link rel="stylesheet" href="/vendor/mocha.css">
     {{/if}}
+    <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
     <header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
@@ -12,7 +13,7 @@
     {{#if showTests}}
         <div id="mocha"></div>
         <script src="/vendor/mocha.js"></script>
-        <script src="venfor/chai.js"></script>
+        <script src="/vendor/chai.js"></script>
         <script>
             mocha.ui('tdd');
             var assert = chai.assert;
