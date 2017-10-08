@@ -19,9 +19,20 @@ app.use(function(req, res, next) {
     next();
 });
 
+
 app.get('/', function(req, res) {
     res.render('home');
 });
+
+// test 浏览器发送信息
+app.get('/headers', function(req, res) {
+    res.set('Content-Type', 'text/plain');
+    var s = '';
+    for (var name in req.headers) s += name + ': ' + req.headers[name] + '\n';
+    res.send(s);
+});
+// test end
+
 app.get('/about', function(req, res) {
     res.render('about', {
         fortune: fortune.getFortune(),
